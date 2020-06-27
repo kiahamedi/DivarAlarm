@@ -10,8 +10,8 @@ import requests
 import time
 from os import system
 
-maxEj = 5000000
-maxVa = 300000000
+maxEj = input(str("Enter your Maximum Rent:"))
+maxVa = input(str("Enter your Maximum Deposit:"))
 url = "https://divar.ir/s/tehran/rent-residential"
 
 while True:
@@ -41,7 +41,7 @@ while True:
         time.sleep(10)
 
 
-    elif (int(vadie) <= maxVa and int(ejare) <= maxEj):
+    elif (vadie) <= maxVa and (ejare) <= maxEj:
         file = open("lastItem.txt", "w+")
         file.write(titleAD)
         file.writelines("\n"+vadie)
@@ -56,3 +56,4 @@ while True:
     else:
         print("Max")
         time.sleep(10)
+
